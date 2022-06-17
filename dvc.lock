@@ -11,3 +11,18 @@ stages:
       md5: edd921b2c3918ccbc77bff37c3177462.dir
       size: 20058283
       nfiles: 10
+  build_data:
+    cmd: Rscript R/build.R
+    deps:
+    - path: R/build.R
+      md5: 0921d0cbb01402d6d9781c1f63c0be2a
+      size: 546
+    - path: download/
+      md5: edd921b2c3918ccbc77bff37c3177462.dir
+      size: 20058283
+      nfiles: 10
+    outs:
+    - path: data/
+      md5: a6ba3784a85d18e747b092f851031a7a.dir
+      size: 2843193
+      nfiles: 10

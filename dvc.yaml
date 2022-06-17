@@ -5,3 +5,10 @@ stages:
     - R/download.R
     outs:
     - download/
+  build_data:
+    cmd: Rscript R/build.R
+    deps:
+    - R/build.R
+    - download/
+    outs:
+    - data/
