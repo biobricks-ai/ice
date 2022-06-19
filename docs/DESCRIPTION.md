@@ -149,15 +149,106 @@ Biobricks.ai transforms ICE into parquet files.
 - QSAR Ready ID.
 - Assay. Name of assay performed.
 - Endpoint. Study endpoint. 
+- Value. Dose.
+- Unit. Units for dose.
+- Species. Species that the dose was tested on.
+- Receptor Species. 
+- lifestage. Stage pf life of organism.
+- tissue. Tissue studied.
+- lesion. Name of the lesion studied.
+- location. Location of lesion. 
+- assaysource. Source of assay.
+- gene. Gene studied.
+- entrezid. Entrez ID for gene.
+- invitroassayformat. Format for assay. 
+- reference. Reference for study.
+- referenceurl. URL for study.
+- pubmedid. PMID of study. 
+
+`Endocrine.parquet`
+- Record.ID. ID for record. 
+- Chemical Name. Name of chemical.
+- Substance Type. Type of substance tested.
+- CASRN. CAS Registry Number.
+- DTXSID. The DTXSID number. 
+- Mixture. Whether or not the product is a mixture.
+- Data Type. Type of data (eg, In Vivo). 
+- Assay. Assay performed.
+- Receptor Species. Receptor of Species. 
+- Endpoint. Study endpoint. 
+- Reported Response Modifier. 
+- Reported Response. 
+- Reported Response Unit. 
+- Conversion Factor. 
+- Conversion Factor Value.
+- Conversion Factor Source. 
+- Converted Response UNit.
+- Response Modifier. 
+- Response.
+- Response Unit.
+- Reference. 
+-Reference 2. 
+
+`Eye_Irritation.parquet`
+- Chemical Name. Name of chemical.
+- CASRN. CAS Registry Number.
+- DTXSID. The DTXSID number. 
+- Assay. Assay performed.
+- Endpoint. Study endpoint. 
+- Value
+- Qsar Ready ID. 
+- Record.ID. ID for record. 
+
+`Skin_Irritation.parquet`
+- Chemical Name. Name of chemical.
+- CASRN. CAS Registry Number.
+- DTXSID. The DTXSID number.
+- Percent Active. The percent of the product made up of the active ingredient.
+- Mixtures. Whether or not the product is a mixture.
+- Data Type. Type of data (eg, In Vivo). 
+- Laboratory.
+- Run number. 
+- 3 min Viability (%).   
+- 60 min Viability (%).  
+- 240 min Viability (%).
+- Assay. Name of assay performed.
+- Endpoint. Study endpoint. 
+- Response Modifier. 
+- Response. Dose of response. 
+- Units. Dose units.
+- Species. Species that the dose was tested on.
+- Sex. The sex of the organisms that the product was tested on.
+- Route. The route of administration.
+- Reference. Reference for study.
+- PMID. PMID of study. 
+- URL. URL for study.
+- Formulation ID. ID for formulation.
+- Record.ID. ID for record. 
+
+`Skin_Sensitization.parquet`
+- Record.ID. ID for record. 
+- Chemical Name. Name of chemical.
+- Substance Type. Type of substance tested.
+- CASRN. CAS Registry Number.
+- DTXSID. The DTXSID number. 
+- QSAR Ready ID> 
+- Assay. Assay performed.
+- Endpoint. Study endpoint. 
 - Value. 
-
-
-[1] "Record ID"          "Chemical Name"      "Substance Type"    
-[4] "CASRN"              "DTXSID"             "QSAR Ready ID"     
-[7] "Assay"              "Endpoint"           "Value"             
-[10] "Unit"               "Species"            "Receptor Species"  
-[13] "Route"              "Sex"                "strain"            
-[16] "lifestage"          "tissue"             "lesion"            
-[19] "location"           "assaysource"        "gene"              
-[22] "entrezid"           "invitroassayformat" "reference"         
-[25] "referenceurl"       "pubmedid"      
+- Unit. Units for dose.
+- Species. Species that the dose was tested on.
+- Receptor Species. 
+- Route. The route of administration.
+- Sex. The sex of the organisms that the product was tested on.
+- Strain. The strain of the organism that the product was tested on.
+- lifestage. Stage pf life of organism.
+- tissue. Tissue studied.
+- lesion. Name of the lesion studied.
+- location. Location of lesion. 
+- assaysource. Source of assay.
+- gene. Gene studied.
+- entrezid. Entrez ID for gene.
+- invitroassayformat. Format for assay. 
+- reference. Reference for study.
+- referenceurl. URL for study.
+- pubmedid. PMID of study.  
