@@ -26,3 +26,42 @@ stages:
       md5: a6ba3784a85d18e747b092f851031a7a.dir
       size: 2843193
       nfiles: 10
+  download:
+    cmd: stages/01_download.sh
+    deps:
+    - path: stages/01_download.sh
+      md5: e3458dfe65116aa4fc5cf66062d3c894
+      size: 1322
+    outs:
+    - path: download
+      md5: 01de622a414dd21677200ab4f538749c.dir
+      size: 49221130
+      nfiles: 11
+  build:
+    cmd: stages/03_build.sh
+    deps:
+    - path: download
+      md5: 25d02576a98bc2ed3a41afe46787ad23.dir
+      size: 673030686
+      nfiles: 11
+    - path: stages/03_build.sh
+      md5: eb2faacb4bfa585f2e9f182ceebaa3ff
+      size: 436
+    - path: stages/csv2parquet.py
+      md5: 4a0a7068a240f59a0efe312d0ec136c9
+      size: 1235
+    outs:
+    - path: brick
+      md5: f151cfee41334dffc355ef9c395d7abe.dir
+      size: 26680511
+      nfiles: 14
+  unzip:
+    cmd: stages/02_unzip.sh
+    deps:
+    - path: download
+      md5: 25d02576a98bc2ed3a41afe46787ad23.dir
+      size: 673030686
+      nfiles: 11
+    - path: stages/02_unzip.sh
+      md5: 8f7247ab18197feb8cc67692ee1eff43
+      size: 485

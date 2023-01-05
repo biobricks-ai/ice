@@ -1,14 +1,20 @@
 stages:
-  download_data:
-    cmd: Rscript R/download.R
+  download:
+    cmd: stages/01_download.sh
     deps:
-    - R/download.R
+    - stages/01_download.sh
     outs:
-    - download/
-  build_data:
-    cmd: Rscript R/build.R
+    - download
+  unzip: 
+    cmd: stages/02_unzip.sh
     deps:
-    - R/build.R
-    - download/
+      - stages/02_unzip.sh
+      - download
+  build: 
+    cmd: stages/03_build.sh
+    deps:
+      - stages/03_build.sh
+      - stages/csv2parquet.py
+      - download
     outs:
-    - data/
+      - brick
