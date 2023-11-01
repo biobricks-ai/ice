@@ -11,8 +11,9 @@ echo "Download path: $downloadpath"
 mkdir -p $downloadpath
 cd $downloadpath;
 
-# define URL file -- 2023-08-18
+# define URL file
 l_url=(
+    # From <https://ice.ntp.niehs.nih.gov/downloads/DataonICE/> (2023-08-18)
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/ADME_Parameters.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Acute_Dermal_Toxicity.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Acute_Inhalation_Toxicity.xlsx"
@@ -26,6 +27,23 @@ l_url=(
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Skin_Irritation.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Skin_Sensitization.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/cHTS2022_invitrodb34_20220302.zip"
+
+    # From <https://ice.ntp.niehs.nih.gov/downloads/MOA/> (2022-03-23)
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/AcuteToxMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/AndrogenMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/CancerMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/CardioToxMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/CardioToxTMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/ChemcialQC.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/ChemicalQC.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/DARTMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/EstrogenMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/SteroidMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/ThyroidMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/Tox21MT.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/cHTSMOA.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/cHTSMT.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/MOA/cHTSMT_ALL.xlsx"
 )
 
 # Use UnsafeLegacyRenegotiation: needed for some newer systems that disable it
