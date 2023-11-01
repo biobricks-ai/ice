@@ -11,15 +11,17 @@ echo "Download path: $downloadpath"
 mkdir -p $downloadpath
 cd $downloadpath;
 
-# define URL file -- 2022-03-23
+# define URL file -- 2023-08-18
 l_url=(
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/ADME_Parameters.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Acute_Dermal_Toxicity.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Acute_Inhalation_Toxicity.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Acute_Oral_Toxicity.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Cancer.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Chemical_Functional_Use_Categories.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/DART.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Endocrine.xlsx"
+    "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Exposure_Predictions.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Eye_Irritation.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Skin_Irritation.xlsx"
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Skin_Sensitization.xlsx"
