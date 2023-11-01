@@ -26,7 +26,7 @@ for file_download in l_files_download:
                 df = pd.read_excel("%s/%s"%(InDirName, file_download), sheet_name=sheet, dtype=str) # make a convert in str for all col - error when first row is NA
                 df.to_parquet("%s/%s_%s.parquet"%(OutDirName, file_download[:-5], sheet.replace(" ", "_")))
     elif file_download[-3:] == "txt":
-        df = pd.read_csv("%s/%s"%(InDirName, file_download), sep = "\t", encoding='unicode_escape', low_memory=False, error_bad_lines=False)
+        df = pd.read_csv("%s/%s"%(InDirName, file_download), sep = "\t", encoding='unicode_escape', low_memory=False, on_bad_lines='skip')
         df.to_parquet("%s/%s.parquet"%(OutDirName, file_download[:-4]))
 
 print(f"csv2parquet: Converting file {InDirName}")
