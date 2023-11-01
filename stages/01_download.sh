@@ -28,10 +28,17 @@ l_url=(
     "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/cHTS2022_invitrodb34_20220302.zip"
 )
 
+# Use UnsafeLegacyRenegotiation: needed for some newer systems that disable it
+# at the system level.
+openssl_conf_eval='
+cat /etc/ssl/openssl.cnf ;
+echo Options = UnsafeLegacyRenegotiation
+'
 
 # Download files
 for url in ${l_url[@]}; do
-  wget $downloadpath $url --secure-protocol=TLSv1
+  OPENSSL_CONF=<(eval "$openssl_conf_eval" ) \
+    wget $url --secure-protocol=TLSv1
 done
 
 
