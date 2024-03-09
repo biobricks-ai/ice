@@ -31,12 +31,12 @@ stages:
       md5: 2af56272a4f034d097a31cfa7f6294c7
       size: 1234
     outs:
-    - path: brick
+    - path: brick/
       hash: md5
       md5: c512c3d1d9946e91955e675d1bb753d6.dir
       size: 70571601
       nfiles: 37
-      
+
   unzip:
     cmd: stages/02_unzip.sh
     deps:

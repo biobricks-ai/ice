@@ -17,4 +17,4 @@ stages:
       - stages/csv2parquet.py
       - download
     outs:
-      - brick
+      - brick/
