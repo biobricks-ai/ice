@@ -19,8 +19,8 @@ stages:
     deps:
     - path: download
       hash: md5
-      md5: 18e0c3f3c0eea29990e32f36f87a4ed5.dir
-      size: 119880936
+      md5: de0128694a39ae0c1aa1bbf4e7a6f6c1.dir
+      size: 743690492
       nfiles: 27
     - path: stages/03_build.sh
       md5: eb2faacb4bfa585f2e9f182ceebaa3ff
@@ -32,9 +32,9 @@ stages:
     outs:
     - path: brick/
       hash: md5
-      md5: c8b9339d9be2513a94996b05b4ccb970.dir
-      size: 46195550
-      nfiles: 26
+      md5: 33c62ab6bc3826f9d6821f1f7a24db14.dir
+      size: 69679909
+      nfiles: 27
   unzip:
     cmd: stages/02_unzip.sh
     deps:
