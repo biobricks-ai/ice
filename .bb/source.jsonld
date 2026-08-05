@@ -1,0 +1,38 @@
+{
+  "@context": "../../context/source.context.jsonld",
+  "@type": "dcat:Dataset",
+  "@id": "https://biobricks.ai/bricks/ice",
+  "dcterms:title": "Integrated Chemical Environment (ICE) toxicity datasets (NIEHS/NTP/NICEATM)",
+  "dcterms:description": "26 toxicity datasets published by the Integrated Chemical Environment (ICE), curated by NICEATM/ICCVAM at the U.S. National Toxicology Program (NTP), NIEHS. The brick downloads the ICE data tables (acute toxicity, cancer, DART, endocrine, exposure predictions, eye/skin irritation, mechanism-of-action panels, cHTS, etc.) as XLSX/ZIP from ice.ntp.niehs.nih.gov and converts each to Parquet. Upstream source is the U.S. federal government ICE portal.",
+  "dcterms:license": "https://www.usa.gov/government-works",
+  "dcterms:creator": "NICEATM / ICCVAM, National Toxicology Program (NTP)",
+  "dcterms:publisher": "National Institute of Environmental Health Sciences (NIEHS), U.S. Department of Health and Human Services",
+  "dcterms:identifier": "https://ice.ntp.niehs.nih.gov/",
+  "biobricks:licenseName": "US Government Work (public domain)",
+  "biobricks:licenseClass": "open",
+  "biobricks:merckCommercialUse": "permitted",
+  "biobricks:licenseEvidence": [
+    {
+      "source": "stages/01_download.sh",
+      "quote": "# From <https://ice.ntp.niehs.nih.gov/downloads/DataonICE/> (2023-08-18) ... \"https://ice.ntp.niehs.nih.gov/downloads/DataonICE/Acute_Oral_Toxicity.xlsx\"",
+      "confidence": "high"
+    },
+    {
+      "source": "/mnt/raid2/biobricks/ice/README.md",
+      "quote": "All ICE datasets are in the **public domain** as works of the United States Government. You may reuse and redistribute freely.",
+      "confidence": "medium"
+    }
+  ],
+  "biobricks:reviewed": false,
+  "biobricks:reviewNotes": "Determined by Claude annotation agent. The download stage fetches all files from ice.ntp.niehs.nih.gov (the ICE portal run by NICEATM/ICCVAM at NTP/NIEHS, a U.S. federal agency within HHS). Works of the U.S. Government are not subject to domestic copyright (17 U.S.C. 105) and are treated as public domain / US Government Work; the brick README asserts public domain. Classified open / permitted. CAVEAT for human review: ICE aggregates data curated with partner organizations, and some individual endpoint datasets may originate from third parties whose terms differ; I could not fetch an explicit machine-readable terms-of-use statement from ice.ntp.niehs.nih.gov (page returned no visible license text, and web-search budget was exhausted). Confidence is medium pending confirmation of the ICE portal's own data-use statement.",
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://ice.ntp.niehs.nih.gov/",
+      "dcterms:title": "Integrated Chemical Environment (ICE) data tables",
+      "dcterms:license": "https://www.usa.gov/government-works",
+      "dcat:downloadURL": "https://ice.ntp.niehs.nih.gov/downloads/DataonICE/",
+      "dcterms:publisher": "NICEATM / NTP / NIEHS"
+    }
+  ]
+}
