@@ -4,7 +4,7 @@
 >
 > **Primary assets:** 26 EPA-published toxicity datasets, each in Parquet format
 >
-> **Data source:** [EPA ICE portal](https://comptox.epa.gov/dashboard/ice)
+> **Data source:** [EPA ICE portal](https://www.epa.gov/comptox-tools/downloadable-computational-toxicology-data)
 >
 > **Licence:** Public domain (U.S. Government data)
 
